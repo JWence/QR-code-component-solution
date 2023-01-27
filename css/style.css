@@ -1,0 +1,77 @@
+:root{
+    --white: hsl(0, 0%, 100%);
+    --ligth-gray: hsl(212, 45%, 89%);
+    --grayish: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+/*Globals*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--ligth-gray);
+}
+
+/* Card Component */
+.card{
+    background-color: var(--white);
+    max-width: 90%;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media (min-width: 768px) {
+    .card{
+        max-width: 33rem;
+    }
+}
+/* Qr image */
+.qr-img{
+    border-radius: 1.5rem;
+    max-width: 100%;
+}
+/* Information */
+.inf{
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 1rem;
+}
+.inf h2{
+    color: var(--dark-blue);
+    margin: 1.6rem 0;
+}
+.inf p{
+    color: var(--grayish);
+    margin: 1.6rem 0 2rem 0;
+    font-size: 1.6rem;
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 1rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
